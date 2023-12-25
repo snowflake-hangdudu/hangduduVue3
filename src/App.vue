@@ -1,9 +1,9 @@
 <template>
   <div class="app">
-    <div class="sum">
+    <!-- <div class="sum">
       <Sum></Sum>
       <LoveTalk></LoveTalk>
-    </div>
+    </div> -->
 
     <div class="nav">
       <RouterLink to="/home" active-class="active">首页</RouterLink>
