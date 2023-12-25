@@ -1,18 +1,38 @@
 <template>
   <div class="app">
-    hangdudu
-    <div class="nav">
-      <a href="">首页</a><a href="">新闻</a><a href="">关于</a>
+    <div class="sum">
+      <Sum></Sum>
+      <LoveTalk></LoveTalk>
     </div>
-    <div class="main-content">负责展示</div>
+
+    <div class="nav">
+      <RouterLink to="/home" active-class="active">首页</RouterLink>
+      <RouterLink to="/news" active-class="active">新闻</RouterLink>
+      <RouterLink to="/about" active-class="active">关于</RouterLink>
+    </div>
+    <div class="main-content">
+      <RouterView />
+    </div>
   </div>
 </template>
 
-<script lang="ts" setup name="App"></script>
+<script lang="ts" setup name="App">
+import { RouterView, RouterLink } from "vue-router";
+import Sum from "./components/Sum.vue";
+import LoveTalk from "./components/LoveTalk.vue";
+</script>
 
 <style scoped>
 .app {
   background-color: #bfa;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sum {
+  padding: 10px;
+  background-color: aqua;
 }
 
 .nav {
@@ -26,7 +46,7 @@
 }
 
 .nav a:active {
-  color: bfa;
+  color: #bfa;
 }
 
 .main-content {
@@ -37,5 +57,9 @@
   min-height: 500px;
   min-width: 500px;
   display: flex;
+}
+
+.active {
+  color: yellow;
 }
 </style>

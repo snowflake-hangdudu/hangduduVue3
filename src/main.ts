@@ -4,8 +4,19 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 
-//挂载App.vue在#app，#app在index文件
-createApp(App).mount("#app");
+import { createPinia } from "pinia";
 
-//使用路由器,并挂载整个应用到app
-App.use(router).mount("#app");
+//创建应用
+const app = createApp(App);
+
+//创建pinia
+const Pinia = createPinia();
+
+//挂载路由
+app.use(router);
+
+//挂载pinia
+app.use(Pinia);
+
+//挂载应用
+app.mount("#app");
