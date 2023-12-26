@@ -1,17 +1,15 @@
 <template>
   <div class="parent">
     <h1>我是父组件</h1>
-    <div class="container">
-      <div class="son"><Son> 1 </Son></div>
-      <div class="son"><Son> 2 </Son></div>
-      <div class="son"><Son> 3 </Son></div>
-    </div>
   </div>
 </template>
 
 <script lang="ts" setup name="Parent">
 import { ref } from "vue";
 import Son from "./Son.vue";
+import mockjs from "mockjs";
+
+let mockjs = reactive(mockjs);
 </script>
 
 <style scoped>

@@ -1,7 +1,6 @@
 <template>
   <div class="son">
     <h1>son</h1>
-    <slot></slot>
   </div>
 </template>
 
